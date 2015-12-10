@@ -24,7 +24,7 @@
  (:require [clojure.string :as str])
  (:gen-class))
 
-(def flink-env (ExecutionEnvironment/createLocalEnvironment))
+(def flink-env (ExecutionEnvironment/getExecutionEnvironment))
 
 (def text (.fromElements flink-env (to-array ["please test me and me too"])))
 
@@ -41,5 +41,5 @@
   (.print counts)
 )
 
-;; enable to execute
+;; enable to execute within Intellij
 ;;(-main)
