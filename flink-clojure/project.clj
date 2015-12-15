@@ -3,7 +3,7 @@
   :url "https://github.com/mjsax/flink-external/tree/master/flink-clojure"
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0"}
-  :dependencies [[org.clojure/clojure "1.5.1"]
+  :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.apache.flink/flink-clients "0.10.1"]]
   :source-paths ["src/main/clojure"]
   :java-source-paths ["src/main/java"]
