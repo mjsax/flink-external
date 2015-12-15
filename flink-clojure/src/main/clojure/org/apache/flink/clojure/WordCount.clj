@@ -17,14 +17,14 @@
 ;
 
 (ns org.apache.flink.clojure.WordCount
- (:import
- (org.apache.flink.api.common.functions FlatMapFunction)
- (org.apache.flink.api.java ExecutionEnvironment)
- (org.apache.flink.api.java.tuple Tuple2))
- (:require [clojure.string :as str])
- (:gen-class))
+  (:import
+  (org.apache.flink.api.common.functions FlatMapFunction)
+  (org.apache.flink.api.java ExecutionEnvironment)
+  (org.apache.flink.api.java.tuple Tuple2))
+  (:require [clojure.string :as str])
+  (:gen-class))
 
-(def flink-env (ExecutionEnvironment/createLocalEnvironment))
+(def flink-env (ExecutionEnvironment/getExecutionEnvironment))
 
 (def text (.fromElements flink-env (to-array ["please test me and me too"])))
 
@@ -41,5 +41,5 @@
   (.print counts)
 )
 
-;; enable to execute
+;; enable to execute within Intellij
 ;;(-main)
